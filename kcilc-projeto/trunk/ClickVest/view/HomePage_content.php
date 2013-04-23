@@ -53,7 +53,7 @@
 		
 		<div class="content wh92pc mrgL30 content_destaques">
 			
-			<h3>Destaques</h3>
+			<h3>Lançamentos</h3>
 			
 			<ul class="lista_produtos" id="lista_produtos">
 				
@@ -84,6 +84,38 @@
 		
 		<div class="clr"></div>
 		
+			<div class="content wh92pc mrgL30 content_destaques">
+			
+			<h3>Promoções</h3>
+			
+			<ul class="lista_produtos" id="lista_produtos">
+				
+				<?php
+					$fachada = Fachada::getInstance();
+					$produtos = $fachada->cadastroProduto()->listar(); 
+					foreach($produtos as $produto){
+				?>
+				
+				<li>
+					<a href="<?php echo Proxy::page(ReservarProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
+					<?php $fotos = $produto->getFotos();?>
+					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos->getNomeArquivo();?>" width="140" height="115"/>
+					<span class="descricao_prod"><?php echo $produto->getDescricao();?></span><br/>
+					<span class="preco_prod">R$ <?php echo $produto->getValor();?></span>
+					
+					<p class="flag_add_cart"><img alt="" src="template/css/img/flag_add_cart.png" width="150"></p>
+					
+					</a>
+				</li>
+				
+				<?php }?>
+				
+				
+			</ul>
+		
+		</div>
+		
+		<div class="clr"></div>
 		
 		<div class="content wh170 mrgL30">
 			<a href="<?php echo Proxy::page(ManterClientePage::$NM_PAGINA);?>">Manter Cliente</a>
@@ -96,6 +128,11 @@
 		<div class="clr"></div>
 		
 		<div class="content wh445 mrgL30">
+		
+			<a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>">Listagem de Produtos</a><br><br><br>
+			
+			<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA);?>">Visualizar Produto</a><br><br><br>
+			
 			<a href="<?php echo Proxy::page(CadastrarProdutoPage::$NM_PAGINA);?>">Cadastro Produto</a><br>
 			<a href="<?php echo Proxy::page(ManterProdutoPage::$NM_PAGINA);?>">Manter Produto</a><br>
 			<a href="<?php echo Proxy::page(ManterReservaPage::$NM_PAGINA);?>">Manter Reserva</a><br>
