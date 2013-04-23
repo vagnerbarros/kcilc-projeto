@@ -114,35 +114,7 @@
 			</ul>
 		
 		</div>
-		
 		<div class="clr"></div>
-		
-		<div class="content wh170 mrgL30">
-			<a href="<?php echo Proxy::page(ManterClientePage::$NM_PAGINA);?>">Manter Cliente</a>
-		</div>
-		
-		<div class="content wh170 mrgL15">
-		
-		</div>
-		
-		<div class="clr"></div>
-		
-		<div class="content wh445 mrgL30">
-		
-			<a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>">Listagem de Produtos</a><br><br><br>
-			
-			<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA);?>">Visualizar Produto</a><br><br><br>
-			
-			<a href="<?php echo Proxy::page(CadastrarProdutoPage::$NM_PAGINA);?>">Cadastro Produto</a><br>
-			<a href="<?php echo Proxy::page(ManterProdutoPage::$NM_PAGINA);?>">Manter Produto</a><br>
-			<a href="<?php echo Proxy::page(ManterReservaPage::$NM_PAGINA);?>">Manter Reserva</a><br>
-		</div>
-
-		<div class="content wh445 mrgL15">
-		</div>
-		
-		<div class="clr"></div>
-		
 		<br/>
 		
 <?php 
