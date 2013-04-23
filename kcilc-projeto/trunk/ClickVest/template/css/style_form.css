@@ -1,0 +1,91 @@
+@CHARSET "ISO-8859-1";
+
+.form_cad{
+	position: relative;
+	width: 800px;
+	margin-left: 30px;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+.form_cad .altr{
+	color: red;
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.form_cad .altr_atualizar{
+	color: blue;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.form_cad .wh400{
+	width: 400px;
+}
+
+.form_cad .wh377{
+	width: 377px;
+}
+
+.form_cad .wh200{
+	width: 200px;
+}
+
+.form_cad .wh176{
+	width: 176px;
+}
+
+.form_cad .epc{
+	margin-right: 10px;
+}
+
+.form_cad label{
+	position: relative;
+	float: left;
+}
+
+.form_cad label span{
+	color: red;
+	font-weight: bold;
+}
+
+.form_cad input[type=text], .form_cad input[type=password]{
+	position: relative;
+	float: left;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.form_cad br{
+	clear: both;
+}
+
+.form_cad input[type=submit]{
+	position: relative;
+	float: left;
+	padding: 7px;
+	margin-top: 5px;
+	border: none;
+	background-color: #F5F5F5;
+	cursor: pointer;
+	border: solid 1px gray;
+	box-shadow: 1px 0px 2px gray;
+	color: #3B3B3B;
+}
+
+.form_cad input[type=submit]:hover{
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #dddddd 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#dddddd 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#dddddd 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+

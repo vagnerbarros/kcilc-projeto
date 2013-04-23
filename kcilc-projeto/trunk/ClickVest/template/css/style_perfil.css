@@ -1,0 +1,68 @@
+@CHARSET "ISO-8859-1";
+
+.content_atualizacao{
+	border: solid 1px black; 
+	width: 600px;
+	overflow: hidden;
+}
+
+#div_dados{
+	width: 400px;
+	float: left;
+	overflow: hidden;
+}
+
+#div_form_atualizar{
+	width: 0px;
+	height: 0;
+	overflow: hidden;
+	float: left;
+	margin-left: -30px;
+}
+
+.lista_cadastro{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+}
+
+.lista_cadastro li{
+	position: relative;
+}
+
+.lista_cadastro .tit{
+	position: relative;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.lista_cadastro .lbl{
+	position: relative;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.links_edit{
+	position: relative;
+	float: left;
+	margin-left: 5px;
+}
+
+.links_edit a{
+	position:relative;
+	font-size: 12px;
+	cursor: pointer;
+	color: red;
+	float: left;
+	margin-top: 10px;
+	font-style: italic;
+	padding:5px ;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.links_edit a:hover{
+	text-decoration: underline;
+}
