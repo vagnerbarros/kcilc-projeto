@@ -40,6 +40,9 @@ Imports::page("ReservarProdutoPage");
 Imports::page("DetalharReservaPage");
 Imports::page("ListarReservaPage");
 
+Imports::page("ProdutoPage");
+
+Imports::page("ListagemProdutosPage");
 
 //Registra as Actions
 Imports::action("CadastroUsuarioAction");

@@ -75,8 +75,11 @@
 					src="template/css/img/seta_down.png" height="6" />
 			</a>
 				<ul class="sub_menu">
-					<li><a href=""> &rsaquo; Social</a></li>
-					<li><a href=""> &rsaquo; Passeio Formal</a></li>
+					<?php $categorias = Categoria::categorias();?>
+					<?php
+					foreach ($categorias as $categoria){ ?>
+						<li><a href=""> &rsaquo; <?php echo $categoria?></a> </li>
+					<?php }?>
 				</ul>
 			</li>
 
@@ -86,8 +89,11 @@
 					src="template/css/img/seta_down.png" height="6" />
 			</a>
 				<ul class="sub_menu">
-					<li><a href=""> &rsaquo; Social</a></li>
-					<li><a href=""> &rsaquo; Passeio Formal</a></li>
+					<?php $categorias = Categoria::categorias();?>
+					<?php
+					foreach ($categorias as $categoria){ ?>
+						<li><a href=""> &rsaquo; <?php echo $categoria?></a> </li>
+					<?php }?>
 				</ul>
 			</li>
 
