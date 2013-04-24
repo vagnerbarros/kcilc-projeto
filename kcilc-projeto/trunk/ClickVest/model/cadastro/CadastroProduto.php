@@ -41,6 +41,10 @@ class CadastroProduto extends CadastroEntidade {
 	public function buscarProdutoPorReserva($id_reserva){
 		return $this->repositorio->selectByIdReserva($id_reserva);
 	}
+	
+	public function buscarGeneroCategoria($genero, $categoria){
+		return $this->repositorio->selectByGeneroCategoria($genero, $categoria);
+	}
 }
 
 ?>

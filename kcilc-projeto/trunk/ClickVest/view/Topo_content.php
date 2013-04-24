@@ -77,14 +77,13 @@
 					<li><a href="">Administração <img alt="" src="template/css/img/seta_down.png" height="6" /></a>
 						<ul class="sub_menu">
 						<li><a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>">Listagem de Produtos</a></li>
-						<li><a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA);?>">Visualizar Produto</a></li>
 						<li><a href="<?php echo Proxy::page(CadastrarProdutoPage::$NM_PAGINA);?>">Cadastro Produto</a></li>
 						<li><a href="<?php echo Proxy::page(ManterProdutoPage::$NM_PAGINA);?>">Manter Produto</a></li>
 						<li><a href="<?php echo Proxy::page(ManterReservaPage::$NM_PAGINA);?>">Manter Reserva</a></li>
 						<li><a href="<?php echo Proxy::page(ManterClientePage::$NM_PAGINA);?>">Manter Cliente</a></li>
-					<?php }?>
 				</ul>
 			</li>
+					<?php }?>
 		<?php 	} ?>
 			<li><a href="">Roupas Masculinas <img alt=""
 					src="template/css/img/seta_down.png" height="6" />
@@ -93,7 +92,7 @@
 					<?php $categorias = Categoria::categorias();?>
 					<?php
 					foreach ($categorias as $categoria){ ?>
-						<li><a href=""> &rsaquo; <?php echo $categoria?></a> </li>
+						<li><a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA, array(Proxy::encrypt('categoria')=>$categoria, Proxy::encrypt('genero')=>Genero::$_MASCULINO));?>"> &rsaquo; <?php echo $categoria?></a> </li>
 					<?php }?>
 				</ul>
 			</li>
@@ -107,7 +106,7 @@
 					<?php $categorias = Categoria::categorias();?>
 					<?php
 					foreach ($categorias as $categoria){ ?>
-						<li><a href=""> &rsaquo; <?php echo $categoria?></a> </li>
+						<li><a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA, array(Proxy::encrypt('categoria')=>$categoria, Proxy::encrypt('genero')=>Genero::$_FEMININO));?>"> &rsaquo; <?php echo $categoria?></a> </li>
 					<?php }?>
 				</ul>
 			</li>
