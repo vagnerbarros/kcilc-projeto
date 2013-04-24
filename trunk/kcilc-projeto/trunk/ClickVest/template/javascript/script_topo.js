@@ -1,3 +1,8 @@
+
+function submeterReserva() {
+	form_reserva.submit();
+}
+
 $(function() {
 	$('#menu li').bind('mouseenter',function(){
 		var $elemento = $(this);
@@ -7,7 +12,7 @@ $(function() {
 		.stop(true)
 		.animate({
 			'width':'150px',
-			'height':'150px',
+			'height':'210px',
 			'left':'0px'
 		},1000,'easeOutBack');
 	}).bind('mouseleave',function(){

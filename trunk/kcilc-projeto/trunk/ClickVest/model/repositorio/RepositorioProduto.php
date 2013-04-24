@@ -27,6 +27,13 @@ class RepositorioProduto extends RepositorioEntidade {
 		return $this->mount($result);
 	}
 	
+	public function selectByGeneroCategoria($genero, $categoria){
+		$keys['genero'] = $genero;
+		$keys['categoria'] = $categoria;
+		$result = $this->select($keys);
+		return $result;
+	}
+	
 	public function selectByIdReserva($id_reserva){
 		$produto_reservado = Constants::$_BASE.".".Constants::$_NAMESPACE.ProdutoReservado::$NM_ENTITY." pr";
 		$produto = Constants::$_BASE.".".Constants::$_NAMESPACE.Produto::$NM_ENTITY." p";

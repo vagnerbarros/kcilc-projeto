@@ -49,7 +49,7 @@ class ListagemProdutosPage extends Page {
 	 * @see Page::content()
 	 */
 	public function content($args, $lang){ 
-		include 'ListagemProdutos_content.php';
+		include 'ListagemProdutosPage_content.php';
 	}
 	
 }

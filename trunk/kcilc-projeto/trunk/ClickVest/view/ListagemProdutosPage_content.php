@@ -1,24 +1,33 @@
 
 <?php 
-	include 'view/Topo_content.php';
+
+include 'view/Topo_content.php';
+$genero = $args->get('genero');
+$categoria = $args->get('categoria');	
+	
 ?>
 
 <div class="limite">
 		
 		<div class="content wh92pc mrgL30 content_destaques">
 			
-			<h3>Masculino - Casual</h3>
+			<h3><?php echo $genero?> - <?php echo $categoria?></h3>
 			
 			<ul class="lista_produtos" id="lista_produtos">
 				
 				<?php
 					$fachada = Fachada::getInstance();
-					$produtos = $fachada->cadastroProduto()->listar(); 
+					if($genero == null && $categoria == null){
+						$produtos = $fachada->cadastroProduto()->listar();
+					} 
+					else{
+						$produtos = $fachada->cadastroProduto()->buscarGeneroCategoria($genero, $categoria);
+					}
 					foreach($produtos as $produto){
 				?>
 				
 				<li>
-					<a href="<?php echo Proxy::page(ReservarProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
+					<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
 					<?php $fotos = $produto->getFotos();?>
 					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos->getNomeArquivo();?>" width="140" height="115"/>
 					<span class="descricao_prod"><?php echo $produto->getDescricao();?></span><br/>

@@ -21,17 +21,17 @@ class ReservarProdutoAction extends Action {
 
 		//TODO
 
+		echo "teste";
 		$fachada = Fachada::getInstance();
 
 		$idProduto = $form->get('id');
-		$quantidade = $form->get('quantidade');
 		$usuario = SessionManager::getUser();
 
 		$reserva = new Reserva(null, $usuario->getId(), date("Y-m-d"), Constants::$_ATIVO);
 
 		try{
 			
-			$fachada->cadastroReserva()->cadastrar($reserva, $idProduto, $quantidade);
+			$fachada->cadastroReserva()->cadastrar($reserva, $idProduto, 1);
 
 			$this->setMessage("Produto reservado com sucesso.", Constants::$_MSG_SUCCESS);
 			$this->load('100%');
