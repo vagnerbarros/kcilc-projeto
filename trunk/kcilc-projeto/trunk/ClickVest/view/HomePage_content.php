@@ -66,7 +66,7 @@
 				<li>
 					<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
 					<?php $fotos = $produto->getFotos();?>
-					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos->getNomeArquivo();?>" width="140" height="115"/>
+					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="140" height="115"/>
 					<span class="descricao_prod"><?php echo $produto->getDescricao();?></span><br/>
 					<span class="preco_prod">R$ <?php echo $produto->getValor();?></span>
 					
@@ -99,7 +99,7 @@
 				<li>
 					<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
 					<?php $fotos = $produto->getFotos();?>
-					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos->getNomeArquivo();?>" width="140" height="115"/>
+					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="140" height="115"/>
 					<span class="descricao_prod"><?php echo $produto->getDescricao();?></span><br/>
 					<span class="preco_prod">R$ <?php echo $produto->getValor();?></span>
 					
