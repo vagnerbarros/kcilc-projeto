@@ -74,7 +74,7 @@ class RepositorioProduto extends RepositorioEntidade {
 			$fotosProduto = new FotoProduto($item['id'], $item['nome_arquivo'], $item['id_produto'], $item['status']);
 			array_push($objs, $fotosProduto);
 		}
-		return $objs[0];
+		return $objs;
 	}
 }
 

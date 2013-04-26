@@ -1,12 +1,12 @@
 <?php
  
-include 'view/Topo_content.php';
 	
 $id_produto = $args->get('id');
 $fachada = Fachada::getInstance();
 $produto = $fachada->cadastroProduto()->buscarId($id_produto);
 $fotos = $produto->getFotos();
-	
+
+include 'view/Topo_content.php';
 ?>
 
 <div class="limite">
@@ -14,7 +14,18 @@ $fotos = $produto->getFotos();
 	<div class="content mrgL30 wh92pc content_detalhar_produto">
 	
 		<div class="left_detalhar">
-			<img alt="" src="<?php echo Constants::$_FOTOS.$fotos->getNomeArquivo();?>" height="250" width="250" />
+		    <div id="image">
+		        <a href="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" class="amplia" title="ClickVest">
+			        <img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" height="250" width="250" />
+		        </a>
+		    </div>
+		    <?php $i = 1; ?>
+		    <?php foreach ($fotos as $foto){ ?>
+		        <a href="#" rel="<?php echo Constants::$_FOTOS.$foto->getNomeArquivo();?>" class="imagem" id="<?php echo $i;?>">
+			       <img width="60" height="60" src="<?php echo Constants::$_FOTOS.$foto->getNomeArquivo();?>" class="thumb<?php echo $i;?>" title="<?php echo $foto->getNomeArquivo();?>"/>
+			    </a>
+			<?php $i++; ?>
+		    <?php } ?>
 		</div>
 	
 		<div class="right_detalhar">
