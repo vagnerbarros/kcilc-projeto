@@ -101,3 +101,47 @@ function submeter() {
 		document.getElementById('txt_busca').focus();
 	}
 }
+
+$(document).ready(function(){
+	var options = {
+            zoomType: 'standard',
+            lens:true,
+            preloadImages: true,
+            alwaysOn: false,
+            zoomWidth: 300,
+            zoomHeight: 350,
+            xOffset:40,
+            yOffset:0,
+            position:'right'
+	};
+	$('.amplia').jqzoom(options);
+});
+
+$(function() {
+    $(".imagem").click(function() {
+        var image = $(this).attr("rel");
+        var selecionado = $(this).attr("id");
+        $('#image').hide();
+        $('#image').fadeIn('slow');
+        $('#image').html('<a href="' + image + '" class="amplia" title="ClickVest"><img width="250" height="250" src="' + image + '"/></a>');
+        var options = {
+                zoomType: 'standard',
+                lens:true,
+                preloadImages: true,
+                alwaysOn: false,
+                zoomWidth: 300,
+                zoomHeight: 350,
+                xOffset:40,
+                yOffset:0,
+                position:'right'
+    	 };
+        $('.amplia').jqzoom(options);
+        //$(".thumb1").css("border-color", "#38A2FF");
+        //$(".thumb2").css("border-color", "#38A2FF");
+        //$(".thumb3").css("border-color", "#38A2FF");
+        //$(".thumb4").css("border-color", "#38A2FF");
+        //$(".thumb"+selecionado).css("border-color", "red");
+        return false;
+	 });
+});
+
