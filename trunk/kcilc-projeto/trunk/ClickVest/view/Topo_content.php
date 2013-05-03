@@ -49,7 +49,7 @@
 	<div class="bg_logo">
 
 		<div class="logotipo">
-			<img alt="" src="template/css/img/logo.png" width="175" />
+			<img alt="" src="template/css/img/logo.png" />
 		</div>
 
 		<form action="teste" class="form_busca" id="form_busca"

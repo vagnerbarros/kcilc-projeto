@@ -90,9 +90,13 @@ body {
 
 .logotipo{
 	position: relative;
-	width: 175px;
 	margin: auto;
-	top: 25px;
+	top: 20px;
+	width: 260px;
+}
+
+.logotipo img{
+	width: 260px;
 }
 
 .form_busca{
@@ -100,6 +104,7 @@ body {
 	float: right;
 	margin-right: 25px;
 	font-size: 12px;
+	margin-top: -20px;
 }
 
 .form_busca a{
