@@ -23,7 +23,7 @@ class Constants {
 	
 		public static $_USER = "root";
 		public static $_PASS = ""; 
-		public static $_BASE = "santa_cruz";
+		public static $_BASE = "clickvest";
 	
 		//ATIVO
 		public static $_ATIVO = 'ATIVO';
