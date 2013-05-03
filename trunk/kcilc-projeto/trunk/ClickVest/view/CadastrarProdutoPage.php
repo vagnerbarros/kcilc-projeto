@@ -44,7 +44,6 @@ class CadastrarProdutoPage extends Page {
 		$this->importJs("script_slide.js");
 		$this->importJs("superfish.js");
 		$this->importJs("jquery.cycle.all.min.js");
-		
 	}
 	
 	/**

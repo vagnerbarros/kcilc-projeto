@@ -3,7 +3,9 @@
 include 'view/Topo_content.php';
 
 ?>
+
 <div class="limite">
+
 <form method='POST' enctype="multipart/form-data" action='<?php echo Proxy::action(CadastrarProdutoAction::$NM_ACTION)?>' target="_top">
 	
 		<label>Descrição*</label>
@@ -25,7 +27,7 @@ include 'view/Topo_content.php';
 			</select>
 		<br/>
 		<label>Categoria*</label>
-		<?php $categorias = Categoria::categorias();?>
+		<?php $categorias = Categoria::todasCategorias();?>
 			<select id="<?php echo Proxy::encrypt('categoria');?>" name="<?php echo Proxy::encrypt('categoria');?>">
 				<?php
 				foreach ($categorias as $categoria){ ?>
@@ -37,10 +39,10 @@ include 'view/Topo_content.php';
 			<input class="<?php echo Proxy::encrypt('multi');?>" name="<?php echo Proxy::encrypt('pic[]');?>" type="file" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('foto');?>");'/>
 		</div>
 	
-	<button type="submit" class='btn btn-primary btn-large'><?php Messages::printStr(Messages::$PT_br, Messages::$STR_ENVIAR)?> &raquo;</button>
+	<input type="submit" >
 </form>
 <?php 
 	include 'view/rodape.php';
 ?>
-
 </div>
+
