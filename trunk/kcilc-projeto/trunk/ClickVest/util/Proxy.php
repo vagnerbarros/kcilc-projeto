@@ -1,4 +1,5 @@
 <?php
+
 class Proxy {
 
 	private static $_PAGE = 'p';
