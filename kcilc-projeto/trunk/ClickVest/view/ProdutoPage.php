@@ -34,7 +34,7 @@ class ProdutoPage extends Page {
 		$this->importCss("jquery.jqzoom.css");
 		$this->importJs("jquery.min.js");
 		$this->importJs("jquery.easing.1.3.js");
-		$this->importJs("script_topo.js");
+		$this->importJs("script_topo_produto_page.js");
 		
 		$this->importJs("jquery-1.8.2.js");
 		$this->importJs("jquery.jqzoom-core.js");
