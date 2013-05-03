@@ -16,6 +16,14 @@ class RepositorioReserva extends RepositorioEntidade {
 	
 	public function selectByIdCliente($id_cliente){
 		$keys['id_cliente'] = $id_cliente;
+		$keys['situacao'] = Situacao::$_FECHADO;
+		$result = $this->select($keys);
+		return $result;
+	}
+	
+	public function selectByIdClienteAberta($id_cliente){
+		$keys['id_cliente'] = $id_cliente;
+		$keys['situacao'] = Situacao::$_ABERTO;
 		$result = $this->select($keys);
 		return $result;
 	}

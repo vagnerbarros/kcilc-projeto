@@ -55,6 +55,7 @@ Imports::action("RemoverClienteAction");
 Imports::action("RemoverProdutoAction");
 
 Imports::action("ReservarProdutoAction");
+Imports::action("FecharReservasAction");
 
 Imports::action("AtualizarPerfilAction");
 Imports::action("AtualizarUsuarioAction");

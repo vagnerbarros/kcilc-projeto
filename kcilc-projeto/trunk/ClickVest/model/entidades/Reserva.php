@@ -8,14 +8,16 @@ class Reserva implements Entidade {
 	private $id;
 	private $id_cliente;
 	private $data;
+	private $situacao;
 	private $status;
 	
 	//construtor
-	public function Reserva($id, $id_cliente, $data, $status){
+	public function Reserva($id, $id_cliente, $data, $situacao, $status){
 		
 		$this->setId($id);
 		$this->setIdCliente($id_cliente);
 		$this->setData($data);
+		$this->setSituacao($situacao);
 		$this->setStatus($status);
 	}
 	
@@ -51,6 +53,7 @@ class Reserva implements Entidade {
 		$hash['id'] = $this->getId();
 		$hash['id_cliente'] = $this->getIdCliente();
 		$hash['data'] = $this->getData();
+		$hash['situacao'] = $this->getSituacao();
 		$hash['status'] = $this->getStatus();  
 		
 		return $hash;
@@ -61,11 +64,10 @@ class Reserva implements Entidade {
 	 */
 	public static function fromArray($hash){
 		
-		return new Reserva($hash['id'], $hash['id_cliente'], $hash['data'], $hash['status']);
+		return new Reserva($hash['id'], $hash['id_cliente'], $hash['data'], $hash['situacao'], $hash['status']);
 	}
 	
 	//metodos get
-	
 	public function getId(){
 		return $this->id;
 	}
@@ -74,6 +76,9 @@ class Reserva implements Entidade {
 	}
 	public function getData(){
 		return $this->data;
+	}
+	public function getSituacao(){
+		return $this->situacao;
 	}
 	public function getStatus(){
 		return $this->status;
@@ -88,6 +93,9 @@ class Reserva implements Entidade {
 	}
 	public function setData($data){
 		$this->data = $data;
+	}
+	public function setSituacao($situacao){
+		$this->situacao = $situacao;
 	}
 	public function setStatus($status){
 		$this->status = $status;

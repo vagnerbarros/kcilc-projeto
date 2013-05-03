@@ -9,7 +9,6 @@
 			<?php 
 			$fachada = Fachada::getInstance();
 			$produtos = $fachada->cadastroProduto()->buscarProdutosReservados(SessionManager::getUser()->getId());
-			
 			foreach ($produtos as $produto){
 			?>
 				<tr>
@@ -19,6 +18,9 @@
 		<?php }?>
 			</thead>
 		</table>
+		<?php if($produtos){?>
+					<a href="<?php echo Proxy::action(FecharReservasAction::$NM_ACTION)?>">Confirmar</a>
+		<?php }?>
 	</div>
 	<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
 	<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />

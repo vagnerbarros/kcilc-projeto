@@ -8,15 +8,14 @@ class CadastroReserva extends CadastroEntidade {
 		parent::__construct(new RepositorioReserva(), $fachada);
 	}
 	
-	public function cadastrar($reserva, $id_produto, $quantidade){
+	public function cadastrar($reserva, $id_produto){
+		
+		//uma unidade do produto reservado
+		$quantidade = 1;
 		
 		$produto = $this->fachada->cadastroProduto()->buscarId($id_produto);
 		$quantidadeEstoque = $produto->getQuantidadeEstoque();
 		if($quantidadeEstoque >= $quantidade){
-			
-			//diminui a quantidade de estoque e atualiza no banco
-			$produto->setQuantidadeEstoque($quantidadeEstoque - $quantidade);
-			$this->fachada->cadastroProduto()->atualizar($produto);
 			
 			//insere a reserva no banco
 			$id_reserva = $this->repositorio->nextId();
@@ -32,12 +31,37 @@ class CadastroReserva extends CadastroEntidade {
 		}
 	}
 	
+	public function fecharReserva($id_usuario){
+		
+		//uma unidade do produto reservado
+		$quantidade = 1;
+		
+		$produtos = $this->fachada->cadastroProduto()->buscarProdutosReservados($id_usuario);
+		foreach ($produtos as $produto){
+			$quantidadeEstoque = $produto->getQuantidadeEstoque();
+		
+			//diminui a quantidade de estoque e atualiza no banco
+			$produto->setQuantidadeEstoque($quantidadeEstoque - $quantidade);
+			$this->fachada->cadastroProduto()->atualizar($produto);
+		}
+		
+		$reservas = $this->repositorio->selectByIdClienteAberta($id_usuario);
+		foreach ($reservas as $reserva){
+			$reserva->setSituacao(Situacao::$_FECHADO);
+			$this->atualizar($reserva);
+		}
+	}
+	
 	public function listar(){
 		return $this->repositorio->selectAll();
 	}
 	
 	public function buscarReservaPorIdCliente($id_cliente){
 		return $this->repositorio->selectByIdCliente($id_cliente);
+	}
+	
+	public function atualizar($reserva){
+		$this->repositorio->update($reserva);
 	}
 }
 
