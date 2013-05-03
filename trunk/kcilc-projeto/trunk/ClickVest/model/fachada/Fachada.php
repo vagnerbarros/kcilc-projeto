@@ -31,6 +31,7 @@ require_once("model/cadastro/CadastroFotoProduto.php");
 //DOMINIOS
 require_once("model/dominio/Genero.php");
 require_once("model/dominio/Categoria.php");
+require_once("model/dominio/Situacao.php");
 
 class Fachada {
 

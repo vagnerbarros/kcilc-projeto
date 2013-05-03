@@ -19,7 +19,7 @@ class RepositorioProdutoReservado extends RepositorioEntidade {
 		$reserva = Constants::$_BASE.".".Constants::$_NAMESPACE.Reserva::$NM_ENTITY." r";
 		$produto_reservado = Constants::$_BASE.".".Constants::$_NAMESPACE.ProdutoReservado::$NM_ENTITY." pr";
 		$query = "SELECT pr.* FROM $produto_reservado, $reserva WHERE pr.status = '".Constants::$_ATIVO."' AND r.status = '".Constants::$_ATIVO."' AND
-		 	r.id_cliente =:id_cliente AND r.id = pr.id_reserva";
+		 	r.id_cliente =:id_cliente AND r.id = pr.id_reserva AND r.situacao = '".Situacao::$_ABERTO."'";
 		$result = ConexaoBD::prepare($query);
 		$result->bindValue(":id_cliente", $id_cliente);
 		$result->execute();

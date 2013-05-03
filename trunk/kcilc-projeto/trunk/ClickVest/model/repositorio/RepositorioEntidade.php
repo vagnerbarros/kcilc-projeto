@@ -53,7 +53,6 @@ abstract class RepositorioEntidade implements IRepositorio{
 			$sep = ", ";
 		}
 		$query .= " ); ";
-		echo $query;
 		$result = ConexaoBD::prepare($query);
 		$index = 1;
 		foreach($fields as $field){
