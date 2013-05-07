@@ -10,7 +10,8 @@
 
 	<?php foreach ($reservas as $reserva){ ?>
 				<label><?php echo $reserva->getData();?></label>
-				<a href="<?php echo Proxy::page(DetalharReservaPage::$NM_PAGINA, array(Proxy::encrypt('id_reserva')=>$reserva->getId()))?>">Detalhar</a>	
+				<a href="<?php echo Proxy::page(DetalharReservaPage::$NM_PAGINA, array(Proxy::encrypt('id_reserva')=>$reserva->getId(), Proxy::encrypt('data')=>$reserva->getData()))?>">Detalhar</a>
+				<br>	
 	<?php }?>
 
 <?php 

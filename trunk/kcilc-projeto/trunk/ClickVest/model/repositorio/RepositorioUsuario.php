@@ -34,7 +34,7 @@ class RepositorioUsuario extends RepositorioEntidade {
 		$usuario = Constants::$_BASE.".".Constants::$_NAMESPACE.Usuario::$NM_ENTITY;
 		
 		$query = "SELECT * FROM $usuario WHERE status = '".Constants::$_ATIVO."' AND
-		 	id = (SELECT DISTINCT(id_cliente) FROM $reserva WHERE status = '".Constants::$_ATIVO."' ORDER BY data DESC)";
+		 	id = (SELECT DISTINCT(id_cliente) FROM $reserva WHERE situacao = '".Situacao::$_FECHADO."' AND status = '".Constants::$_ATIVO."' ORDER BY data DESC)";
 		$result = ConexaoBD::prepare($query);
 		$result->execute();
 		$this->reportErrors($result);
