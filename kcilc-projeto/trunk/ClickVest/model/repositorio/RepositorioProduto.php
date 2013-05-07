@@ -34,6 +34,15 @@ class RepositorioProduto extends RepositorioEntidade {
 		return $result;
 	}
 	
+	public function selectByGeneroCategoriaTamanhoCor($genero, $categoria, $tamanho, $cor){
+		$keys['genero'] = $genero;
+		$keys['categoria'] = $categoria;
+		$keys['tamanho'] = $tamanho;
+		$keys['cor'] = $cor;
+		$result = $this->select($keys);
+		return $result;
+	}
+	
 	public function selectByIdReserva($id_reserva){
 		$produto_reservado = Constants::$_BASE.".".Constants::$_NAMESPACE.ProdutoReservado::$NM_ENTITY." pr";
 		$produto = Constants::$_BASE.".".Constants::$_NAMESPACE.Produto::$NM_ENTITY." p";
