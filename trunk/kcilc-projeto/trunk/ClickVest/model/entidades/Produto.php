@@ -11,19 +11,23 @@ class Produto implements Entidade {
 	private $valor;
 	private $categoria;
 	private $genero;
+	private $tamanho;
+	private $cor;
 	private $status;
 	
 	//fotos do produto
 	private $fotos;
 	
 	//construtor
-	public function Produto($id, $quantidade_estoque, $descricao, $valor, $categoria, $genero, $status){
+	public function Produto($id, $quantidade_estoque, $descricao, $valor, $categoria, $genero, $tamanho, $cor, $status){
 		
 		$this->setId($id);
 		$this->setQuantidadeEstoque($quantidade_estoque);
 		$this->setDescricao($descricao);
 		$this->setValor($valor);
 		$this->setGenero($genero);
+		$this->setTamanho($tamanho);
+		$this->setCor($cor);
 		$this->setCategoria($categoria);
 		$this->setStatus($status);
 	}
@@ -62,6 +66,8 @@ class Produto implements Entidade {
 		$hash['descricao'] = $this->getDescricao();
 		$hash['valor'] = $this->getValor();
 		$hash['genero'] = $this->getGenero();
+		$hash['tamanho'] = $this->getTamanho();
+		$hash['cor'] = $this->getCor();
 		$hash['categoria'] = $this->getCategoria();
 		$hash['status'] = $this->getStatus();  
 		
@@ -73,7 +79,7 @@ class Produto implements Entidade {
 	 */
 	public static function fromArray($hash){
 		
-		return new Produto($hash['id'], $hash['quantidade_estoque'], $hash['descricao'], $hash['valor'], $hash['categoria'], $hash['genero'], $hash['status']);
+		return new Produto($hash['id'], $hash['quantidade_estoque'], $hash['descricao'], $hash['valor'], $hash['categoria'], $hash['genero'], $hash['tamanho'], $hash['cor'], $hash['status']);
 	}
 	
 	//metodos get
@@ -95,6 +101,12 @@ class Produto implements Entidade {
 	}
 	public function getGenero(){
 		return $this->genero;
+	}
+	public function getTamanho(){
+		return $this->tamanho;
+	}
+	public function getCor(){
+		return $this->cor;
 	}
 	public function getFotos(){
 		return $this->fotos;
@@ -121,6 +133,12 @@ class Produto implements Entidade {
 	}
 	public function setGenero($genero){
 		$this->genero = $genero;
+	}
+	public function setTamanho($tamanho){
+		$this->tamanho = $tamanho;
+	}
+	public function setCor($cor){
+		$this->cor = $cor;
 	}
 	public function setFotos($fotos){
 		$this->fotos = $fotos;

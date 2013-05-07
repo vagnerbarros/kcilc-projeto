@@ -35,6 +35,24 @@ include 'view/Topo_content.php';
 				<?php }?>
 			</select>
 		<br/>
+		<label>Tamanho*</label>
+		<?php $tamanhos = Tamanho::todos();?>
+			<select id="<?php echo Proxy::encrypt('tamanho');?>" name="<?php echo Proxy::encrypt('tamanho');?>">
+				<?php
+				foreach ($tamanhos as $tamanho){ ?>
+				<option value="<?php echo $tamanho?>"><?php echo $tamanho?></option>
+				<?php }?>
+			</select>
+		<br/>
+		<label>Cor*</label>
+		<?php $cores = Cor::todas();?>
+			<select id="<?php echo Proxy::encrypt('cor');?>" name="<?php echo Proxy::encrypt('cor');?>">
+				<?php
+				foreach ($cores as $cor){ ?>
+				<option value="<?php echo $cor?>"><?php echo $cor?></option>
+				<?php }?>
+			</select>
+		<br/>
 		<label>Foto*</label>
 			<input class="<?php echo Proxy::encrypt('multi');?>" name="<?php echo Proxy::encrypt('pic[]');?>" type="file" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('foto');?>");'/>
 		</div>

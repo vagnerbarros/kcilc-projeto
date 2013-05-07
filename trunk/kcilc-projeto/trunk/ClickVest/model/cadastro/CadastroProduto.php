@@ -45,6 +45,10 @@ class CadastroProduto extends CadastroEntidade {
 	public function buscarGeneroCategoria($genero, $categoria){
 		return $this->repositorio->selectByGeneroCategoria($genero, $categoria);
 	}
+	
+	public function buscarGeneroCategoriaTamanhoCor($genero, $categoria, $tamanho, $cor){
+		return $this->repositorio->selectByGeneroCategoriaTamanhoCor($genero, $categoria, $tamanho, $cor);
+	}
 }
 
 ?>
