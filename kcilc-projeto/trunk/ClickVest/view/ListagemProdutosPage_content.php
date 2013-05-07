@@ -4,7 +4,9 @@
 include 'view/Topo_content.php';
 $genero = $args->get('genero');
 $categoria = $args->get('categoria');	
-	
+$tamanhos = Tamanho::todos();	
+$cores = Cor::todas();
+
 ?>
 
 <div class="limite">
@@ -12,7 +14,13 @@ $categoria = $args->get('categoria');
 		<div class="content wh92pc mrgL30 content_destaques">
 			
 			<h3><?php echo $genero?> - <?php echo $categoria?></h3>
-			
+			<div>
+				<select>
+					<?php foreach ($cores as $cor){?>
+					<option value="<?php echo $cor?>"><?php echo $cor?></option>
+					<?php }?>
+				</select>
+			</div>
 			<ul class="lista_produtos" id="lista_produtos">
 				
 				<?php
