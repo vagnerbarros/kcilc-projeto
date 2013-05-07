@@ -30,6 +30,7 @@ Imports::page("CadastrarProdutoPage");
 Imports::page("CadastroUsuarioPage");
 	
 Imports::page("CarrinhoPage");
+Imports::page("ChatPage");
 Imports::page("HomePage");
 
 Imports::page("ManterClientePage");
@@ -50,6 +51,7 @@ Imports::action("CadastrarProdutoAction");
 
 Imports::action("LoginAction");
 Imports::action("LogoutAction");
+Imports::action("ChatAction");
 
 Imports::action("RemoverClienteAction");
 Imports::action("RemoverProdutoAction");
