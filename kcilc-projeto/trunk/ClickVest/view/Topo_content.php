@@ -112,6 +112,8 @@
 				<li><a href="<?php echo Proxy::page(CadastroUsuarioPage::$NM_PAGINA);?>">Cadastre-se</a></li>
 			<?php }else{?>
 				<li><a href="<?php echo Proxy::page(AtualizarPerfilPage::$NM_PAGINA);?>">Meu Cadastro</a></li>
+				<li>|</li>
+				<li><a href="<?php echo Proxy::page(ChatPage::$NM_PAGINA);?>">Contato com Atendente</a></li>
 			<?php }?>
 			
 		</ul>

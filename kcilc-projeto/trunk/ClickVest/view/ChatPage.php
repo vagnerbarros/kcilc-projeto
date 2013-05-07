@@ -1,19 +1,19 @@
 <?php 
-class CarrinhoPage extends Page {
+class ChatPage extends Page {
 	
 	/**
 	 * Constante que representa o ID desta página 
 	 * na seção
 	 * @var String NM_PAGINA
 	 */
-	public static $NM_PAGINA = 'CarrinhoPage';
+	public static $NM_PAGINA = 'ChatPage';
 	
 	/**
 	 * (non-PHPdoc)
 	 * @see Page::title()
 	 */
 	public function title($lang){
-		return "Carrinho";
+		return "Contato com Atendente";
 	}
 	
 	/**
@@ -38,7 +38,7 @@ class CarrinhoPage extends Page {
 		$this->importCss("style_rodape.css");
 		//Import Geral
 		$this->importCss("style.css");
-		
+		$this->importCss("style_form.css");
 		//ImportsParaPage
 		$this->importCss("style_carrinho.css");
 		
@@ -49,7 +49,7 @@ class CarrinhoPage extends Page {
 	 * @see Page::content()
 	 */
 	public function content($args, $lang){ 
-		include 'CarrinhoPage_content.php';
+		include 'ChatPage_content.php';
 	}
 	
 }
