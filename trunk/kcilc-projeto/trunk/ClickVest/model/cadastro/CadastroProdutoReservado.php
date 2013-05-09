@@ -15,6 +15,10 @@ class CadastroProdutoReservado extends CadastroEntidade {
 	public function buscarPorIdClienteReserva($id_cliente){
 		return $this->repositorio->selectByIdClienteReserva($id_cliente);
 	}
+	
+	public function remover($id_reserva, $id_produto){
+		$this->repositorio->remover($id_reserva, $id_produto);
+	}
 }
 
 ?>

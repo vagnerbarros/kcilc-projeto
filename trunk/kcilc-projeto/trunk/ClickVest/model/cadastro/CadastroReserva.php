@@ -63,6 +63,14 @@ class CadastroReserva extends CadastroEntidade {
 	public function atualizar($reserva){
 		$this->repositorio->update($reserva);
 	}
+	
+	public function remover($id_cliente, $id_produto){
+		
+		$reservas = $this->repositorio->selectByIdClienteProduto($id_cliente, $id_produto);
+		$reserva = $reservas[0];
+		$this->repositorio->delete($reserva);
+		$this->fachada->cadastroProdutoReservado()->remover($reserva->getId(), $id_produto);
+	}
 }
 
 ?>

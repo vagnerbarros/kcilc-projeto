@@ -27,6 +27,19 @@ class RepositorioProdutoReservado extends RepositorioEntidade {
 		return $this->mount($result);
 	}
 	
+	public function remover($id_reserva, $id_produto){
+		$produto_reservado = Constants::$_BASE.".".Constants::$_NAMESPACE.ProdutoReservado::$NM_ENTITY;
+		$query = "UPDATE $produto_reservado SET status = '".Constants::$_INATIVO."'
+		 WHERE id_reserva =:id_reserva AND id_produto =:id_produto";
+		$result = ConexaoBD::prepare($query);
+		$result->bindValue(":id_reserva", $id_reserva);
+		$result->bindValue(":id_produto", $id_produto);
+		
+		$stts = $result->execute();
+		$this->reportErrors($result);
+		return $stts;
+	}
+	
 	public function mount($resultSet){
 		$objs = array();
 		while ($item = $resultSet->fetch()) {
