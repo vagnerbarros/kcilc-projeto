@@ -29,9 +29,9 @@
 			<tbody>
 				<tr>
 					<td><?php echo 	$produto->getDescricao();?></td>
-					<td align="center">Q.U.A.N.T.I.D.A.D.E</td>
+					<td align="center">1</td>
 					<td align="center"><?php echo $produto->getValor();?></td>
-					<td align="center"> <a href=""> <img alt="" src="template/css/img/remove.png"/> </a> </td>
+					<td align="center"> <a href="<?php echo Proxy::action(RemoverProdutoCarrinhoAction::$NM_ACTION, array(Proxy::encrypt('id_produto')=>$produto->getId()));?>"> <img alt="" src="template/css/img/remove.png"/> </a> </td>
 				</tr>
 			</tbody>
 			
