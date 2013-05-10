@@ -3,6 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta http-equiv="refresh" content="3" />
+
+<style type="text/css">
+
+.mensagens{
+     position: relative;
+     width: 435px;
+     left: 30px;
+}
+
+</style>
+
 <title>Chat</title>
 <script type="text/javascript">
 function rolar() {
