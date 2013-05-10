@@ -43,6 +43,8 @@ include 'view/Topo_content.php';
 				<p> <strong> Gênero: </strong> <?php echo $produto->getGenero();?> </p>
 			
 				<p> <strong> Categoria: </strong> <?php echo $produto->getCategoria();?> </p>
+				
+				<p> <strong> Tamanho: </strong> <?php echo $produto->getTamanho();?> </p>
 			
 				<p> <a href="javascript:submeterReserva();">Reservar</a> </p>
 		

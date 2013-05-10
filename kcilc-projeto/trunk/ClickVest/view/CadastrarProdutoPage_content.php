@@ -53,6 +53,16 @@ include 'view/Topo_content.php';
 				<?php }?>
 			</select>
 		<br/>
+		<label>Situacao*</label>
+		<?php $situacoes = SituacaoProduto::situacoes();?>
+			<select id="<?php echo Proxy::encrypt('situacao');?>" name="<?php echo Proxy::encrypt('situacao');?>">
+				<?php
+				foreach ($situacoes as $situacao){ ?>
+				<option value="<?php echo $situacao?>"><?php echo $situacao?></option>
+				<?php }?>
+			</select>
+		<br/>
+		
 		<label>Foto*</label>
 			<input class="<?php echo Proxy::encrypt('multi');?>" name="<?php echo Proxy::encrypt('pic[]');?>" type="file" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('foto');?>");'/>
 		</div>

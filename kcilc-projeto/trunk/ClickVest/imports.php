@@ -25,25 +25,23 @@ require_once("model/fachada/Fachada.php");
 Imports::page("AtualizarPerfilPage");
 Imports::page("AtualizarUsuarioPage");
 Imports::page("AtualizarProdutoPage");
-
 Imports::page("CadastrarProdutoPage");
 Imports::page("CadastroUsuarioPage");
-	
 Imports::page("CarrinhoPage");
 Imports::page("ChatPage");
 Imports::page("HomePage");
-
 Imports::page("ManterClientePage");
 Imports::page("ManterProdutoPage");
 Imports::page("ManterReservaPage");
-
 Imports::page("ReservarProdutoPage");
 Imports::page("DetalharReservaPage");
 Imports::page("ListarReservaPage");
-
 Imports::page("ProdutoPage");
-
 Imports::page("ListagemProdutosPage");
+Imports::page("PoliticasAtendimentoPage");
+Imports::page("ClickVestPage");
+Imports::page("RaioAtuacaoPage");
+Imports::page("HistoricoReservaPage");
 
 //Registra as Actions
 Imports::action("CadastroUsuarioAction");

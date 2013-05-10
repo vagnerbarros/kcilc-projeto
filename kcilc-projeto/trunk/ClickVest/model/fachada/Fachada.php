@@ -34,6 +34,7 @@ require_once("model/dominio/Categoria.php");
 require_once("model/dominio/Situacao.php");
 require_once("model/dominio/Tamanho.php");
 require_once("model/dominio/Cor.php");
+require_once("model/dominio/SituacaoProduto.php");
 
 class Fachada {
 

@@ -27,6 +27,26 @@ class RepositorioProduto extends RepositorioEntidade {
 		return $this->mount($result);
 	}
 	
+	// Sem Status de Aberto
+    public function selectByIdReservaClienteHistorico($id_cliente){
+		$reserva = Constants::$_BASE.".".Constants::$_NAMESPACE.Reserva::$NM_ENTITY." r";
+		$produto_reservado = Constants::$_BASE.".".Constants::$_NAMESPACE.ProdutoReservado::$NM_ENTITY." pr";
+		$produto = Constants::$_BASE.".".Constants::$_NAMESPACE.Produto::$NM_ENTITY." p";
+		$query = "SELECT p.* FROM $produto, $produto_reservado, $reserva WHERE p.status = '".Constants::$_ATIVO."' AND pr.status = '".Constants::$_ATIVO."' AND r.status = '".Constants::$_ATIVO."' AND
+		 	r.id_cliente =:id_cliente AND r.id = pr.id_reserva AND pr.id_produto = p.id AND r.situacao <> '".Situacao::$_ABERTO."'";
+		$result = ConexaoBD::prepare($query);
+		$result->bindValue(":id_cliente", $id_cliente);
+		$result->execute();
+		$this->reportErrors($result);
+		return $this->mount($result);
+	}
+	
+    public function selectBySituacao($situacao){
+		$keys['situacao'] = $situacao;
+		$result = $this->select($keys);
+		return $result;
+	}
+	
 	public function selectByGeneroCategoria($genero, $categoria){
 		$keys['genero'] = $genero;
 		$keys['categoria'] = $categoria;

@@ -34,12 +34,20 @@ class CadastroProduto extends CadastroEntidade {
 		return $this->repositorio->selectByIdReservaCliente($id_cliente);
 	}
 	
+    public function buscarHistoricoProdutosReservados($id_cliente){
+		return $this->repositorio->selectByIdReservaClienteHistorico($id_cliente);
+	}
+	
 	public function proximoId(){
 		return $this->repositorio->nextId();
 	}
 	
 	public function buscarProdutoPorReserva($id_reserva){
 		return $this->repositorio->selectByIdReserva($id_reserva);
+	}
+	
+    public function buscarProdutoPorSituacao($situacao){
+		return $this->repositorio->selectBySituacao($situacao);
 	}
 	
 	public function buscarGeneroCategoria($genero, $categoria){

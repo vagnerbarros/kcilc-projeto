@@ -39,10 +39,12 @@
 		</table>
 		
 		<?php if($produtos){?>
-					<a class="link_confirmar" href="<?php echo Proxy::action(FecharReservasAction::$NM_ACTION)?>">Confirmar</a>
+					<a class="link_confirmar" href="<?php echo Proxy::action(FecharReservasAction::$NM_ACTION)?>">Fechar Reservas</a>
 		<?php }?>
 		
 	</div>
+	
+	<div class="clr"></div>
 	<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
 	<br /> <br />
 	
