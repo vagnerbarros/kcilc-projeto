@@ -9,13 +9,13 @@ include 'view/Topo_content.php';
 <form method='POST' enctype="multipart/form-data" action='<?php echo Proxy::action(CadastrarProdutoAction::$NM_ACTION)?>' target="_top">
 	
 		<label>Descrição*</label>
-			<input id="<?php echo Proxy::encrypt('descricao');?>" name="<?php echo Proxy::encrypt('descricao');?>" type="text"  onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('descricao');?>");'/>
+			<input value="teste" id="<?php echo Proxy::encrypt('descricao');?>" name="<?php echo Proxy::encrypt('descricao');?>" type="text"  onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('descricao');?>");'/>
 		<br/>
 		<label>Valor*</label>
-			<input id="<?php echo Proxy::encrypt('valor');?>" name="<?php echo Proxy::encrypt('valor');?>" type="text" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('valor');?>");'/>
+			<input value="30" id="<?php echo Proxy::encrypt('valor');?>" name="<?php echo Proxy::encrypt('valor');?>" type="text" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('valor');?>");'/>
 		<br/>	
 		<label>Quantidade*</label>
-			<input id="<?php echo Proxy::encrypt('quantidade');?>" name="<?php echo Proxy::encrypt('quantidade');?>" type="text" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('quantidade');?>");'/>
+			<input value="5" id="<?php echo Proxy::encrypt('quantidade');?>" name="<?php echo Proxy::encrypt('quantidade');?>" type="text" onfocus='ajuda(this, "ajuda_<?php echo Proxy::encrypt('quantidade');?>");'/>
 		<br/>
 		<label>Genero*</label>
 		<?php $generos = Genero::generos();?>
