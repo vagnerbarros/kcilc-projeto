@@ -36,7 +36,7 @@ include 'view/Topo_content.php';
 			
 				<h3><?php echo $produto->getDescricao();?></h3>
 				
-				<p> <strong> Valor do Aluguel </strong> R$ - <?php echo $produto->getValor();?></p>
+				<p> <strong> Valor do Aluguel </strong> R$ <?php echo $produto->getValor();?></p>
 			
 				<p> <strong> Quantidade Disponível: </strong><?php echo $produto->getQuantidadeEstoque();?></p>
 			

@@ -14,6 +14,12 @@ $cores = Cor::todas();
 
 ?>
 
+<script type="text/javascript">
+
+
+
+</script>
+
 <div class="limite">
 		
 		<div class="content wh92pc mrgL30 content_destaques">
@@ -37,8 +43,7 @@ $cores = Cor::todas();
 				<input type="submit">
 			</div>
 			</form>
-			<ul class="lista_produtos" id="lista_produtos">
-				
+			<div class="holder"></div>
 				<?php
 					$fachada = Fachada::getInstance();
 					if($genero == null && $categoria == null){
@@ -54,8 +59,10 @@ $cores = Cor::todas();
 					}
 					foreach($produtos as $produto){
 				?>
-				
-				<li>
+			
+			
+			<ul id="lista_produtos" class="lista_produtos">
+			    <li>
 					<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
 					<?php $fotos = $produto->getFotos();?>
 					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="140" height="115"/>
@@ -65,12 +72,13 @@ $cores = Cor::todas();
 					<p class="flag_add_cart"><img alt="" src="template/css/img/flag_add_cart.png" width="150"></p>
 					
 					</a>
-				</li>
+			    </li>
+			</ul>
 				
 				<?php }?>
 				
+			<div class="holder"></div>
 				
-			</ul>
 		
 		</div>
 		

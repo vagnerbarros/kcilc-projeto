@@ -116,6 +116,15 @@
 				<li><a href="<?php echo Proxy::page(ChatPage::$NM_PAGINA);?>">Contato com Atendente</a></li>
 			<?php }?>
 			
+			<li>|</li>
+		    <li>
+		        <a href="<?php echo Proxy::page(ChatPage::$NM_PAGINA);?>">ClickVest</a>
+		        <ul class="sub_menu">
+						<li><a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>">Quem Somos</a></li>
+						<li><a href="<?php echo Proxy::page(CadastrarProdutoPage::$NM_PAGINA);?>">Raio de Atuação</a></li>
+						<li><a href="<?php echo Proxy::page(ManterProdutoPage::$NM_PAGINA);?>">Políticas de Atendimento</a></li>
+				</ul>
+		    </li>
 		</ul>
 
 		<div class="clr"></div>
