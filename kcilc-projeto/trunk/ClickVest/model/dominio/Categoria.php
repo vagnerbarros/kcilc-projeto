@@ -26,6 +26,7 @@ class Categoria {
 			array_push($categorias, Categoria::$_VESTIDO_CURTO);
 			array_push($categorias, Categoria::$_VESTIDO_LONGO);
 			array_push($categorias, Categoria::$_SANDALIA);
+			array_push($categorias, Categoria::$_SAPATO);
 		}
 		return $categorias;
 	}
