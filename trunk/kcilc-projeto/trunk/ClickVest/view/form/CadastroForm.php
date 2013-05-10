@@ -73,7 +73,10 @@
 	
 	<?php include "view/components/Captcha.php"?>
 	
-	<input type="submit" class='btn btn-primary btn-large' value="Confimar"/>
+	<label class="wh200"><a href="<?php echo Proxy::page(PoliticasAtendimentoPage::$NM_PAGINA);?>" target="_blank" style="color: black;">Políticas de Atendimento</a> <span>*</span></label>
+	
+	
+	<input type="submit" class='btn btn-primary btn-large' id="submit_form" value="Confimar" />
 	
 </form>
 

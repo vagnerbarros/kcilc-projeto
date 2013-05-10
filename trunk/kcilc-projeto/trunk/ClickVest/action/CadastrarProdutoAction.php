@@ -29,7 +29,8 @@ class CadastrarProdutoAction extends Action {
 		$genero = $form->get('genero');
 		$tamanho = $form->get('tamanho');
 		$cor = $form->get('cor');
-		$produto = new Produto(null, $quantidade, $descricao, $valor, $categoria, $genero, $tamanho, $cor, Constants::$_ATIVO);
+		$situacao = $form->get('situacao');
+		$produto = new Produto(null, $quantidade, $descricao, $valor, $categoria, $genero, $tamanho, $cor, $situacao ,Constants::$_ATIVO);
 		
 		$idProduto = $fachada->cadastroProduto()->proximoId();
 		$fachada->cadastroProduto()->cadastrar($produto);

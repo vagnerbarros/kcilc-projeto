@@ -37,13 +37,12 @@
 		<div class="content wh403 mrgL15 content_welcome">
 			<h3>Bem-Vindo ao ClickVest.net</h3>
 			
-			<p>O ClickVest é uma forma inteligente de You can create your shop
-			with unlimited combinations, colors and with a lot of great features.
-			This is the first of the 8 sliders available, and here you can put
-			some widgets (i’m using a text widget to add this content! :)
-			Unlimited colors, 200+ Cufon/Google fonts, 60 custom
-			background...Maya is a theme designed by yourself. Is really fun to
-			set up your e-commerce site with this wonderful theme.</p>
+			<p>A CLICKVEST é uma empresa que irá ofertar serviços de aluguel de roupas e acessórios 
+			para festas e eventos por meio da modalidade E-Commerce, visando comodidade e otimização de tempo. 
+			Para isso, a equipe de vendas, que corresponderão aos colaboradores on-line, telemarketing e 
+			vendedores que atenderão os clientes em suas residências deverão atender aos clientes de maneira 
+			eficiente, demonstrando seriedade, segurança e conhecimento dos produtos e serviços possibilitando a 
+			qualidade no atendimento e uma agradável experiência de compra...</p>
 
 			<p>Contate-nos hoje mesmo! (81) 9999.9999</p>
 			
@@ -59,7 +58,7 @@
 				
 				<?php
 					$fachada = Fachada::getInstance();
-					$produtos = $fachada->cadastroProduto()->listar(); 
+					$produtos = $fachada->cadastroProduto()->buscarProdutoPorSituacao(SituacaoProduto::$_LANCAMENTO); 
 					foreach($produtos as $produto){
 				?>
 				
@@ -92,7 +91,7 @@
 				
 				<?php
 					$fachada = Fachada::getInstance();
-					$produtos = $fachada->cadastroProduto()->listar(); 
+					$produtos = $fachada->cadastroProduto()->buscarProdutoPorSituacao(SituacaoProduto::$_PROMOCAO); 
 					foreach($produtos as $produto){
 				?>
 				

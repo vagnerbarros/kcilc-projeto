@@ -24,7 +24,7 @@
 		<form class="form_cad" method='POST' action='<?php echo $PHP_SELF; ?>' >
 	        <label class="wh400">Mensagem:</label>
 	        <input class="wh377 epc" id="mensagem" name="mensagem" type="text"/>
-	        <input type="hidden" name="pessoa" value="Wolney">
+	        <input type="hidden" name="pessoa" value="Cliente">
 	        <input type="submit" class='btn btn-primary btn-large' value="Enviar"/>
 	    </form>
 	</div>

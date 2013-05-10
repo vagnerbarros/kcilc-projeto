@@ -12,7 +12,7 @@ $(function() {
 		.stop(true)
 		.animate({
 			'width':'150px',
-			'height':'210px',
+			'height':'230px',
 			'left':'0px'
 		},1000,'easeOutBack');
 	}).bind('mouseleave',function(){

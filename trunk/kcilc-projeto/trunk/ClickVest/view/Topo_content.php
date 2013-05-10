@@ -107,24 +107,31 @@
 			<li>|</li>
 			
 		<?php }?>
+		    <li>
+		        <a href="">ClickVest</a>
+		        <ul class="sub_menu">
+						<li><a href="<?php echo Proxy::page(ClickVestPage::$NM_PAGINA);?>">Quem Somos</a></li>
+						<li><a href="<?php echo Proxy::page(RaioAtuacaoPage::$NM_PAGINA);?>">Raio de Atuação</a></li>
+						<li><a href="<?php echo Proxy::page(PoliticasAtendimentoPage::$NM_PAGINA);?>">Políticas de Atendimento</a></li>
+				</ul>
+		    </li>
+			<li>|</li>
 			
 			<?php if(!$usuario){ ?>
 				<li><a href="<?php echo Proxy::page(CadastroUsuarioPage::$NM_PAGINA);?>">Cadastre-se</a></li>
 			<?php }else{?>
-				<li><a href="<?php echo Proxy::page(AtualizarPerfilPage::$NM_PAGINA);?>">Meu Cadastro</a></li>
+				<li>
+				    <a href="">Meu Cadastro</a>
+				    <ul class="sub_menu">
+						<li><a href="<?php echo Proxy::page(AtualizarPerfilPage::$NM_PAGINA);?>">Dados Cadastrais</a></li>
+						<li><a href="<?php echo Proxy::page(CarrinhoPage::$NM_PAGINA);?>">Meu Carrinho</a></li>
+						<li><a href="<?php echo Proxy::page(HistoricoReservaPage::$NM_PAGINA);?>">Histórico de Reservas</a></li>
+				</ul>
+				</li>
 				<li>|</li>
 				<li><a href="<?php echo Proxy::page(ChatPage::$NM_PAGINA);?>">Contato com Atendente</a></li>
 			<?php }?>
 			
-			<li>|</li>
-		    <li>
-		        <a href="<?php echo Proxy::page(ChatPage::$NM_PAGINA);?>">ClickVest</a>
-		        <ul class="sub_menu">
-						<li><a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>">Quem Somos</a></li>
-						<li><a href="<?php echo Proxy::page(CadastrarProdutoPage::$NM_PAGINA);?>">Raio de Atuação</a></li>
-						<li><a href="<?php echo Proxy::page(ManterProdutoPage::$NM_PAGINA);?>">Políticas de Atendimento</a></li>
-				</ul>
-		    </li>
 		</ul>
 
 		<div class="clr"></div>

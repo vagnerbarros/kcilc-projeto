@@ -13,13 +13,14 @@ class Produto implements Entidade {
 	private $genero;
 	private $tamanho;
 	private $cor;
+	private $situacao;
 	private $status;
 	
 	//fotos do produto
 	private $fotos;
 	
 	//construtor
-	public function Produto($id, $quantidade_estoque, $descricao, $valor, $categoria, $genero, $tamanho, $cor, $status){
+	public function Produto($id, $quantidade_estoque, $descricao, $valor, $categoria, $genero, $tamanho, $cor, $situacao, $status){
 		
 		$this->setId($id);
 		$this->setQuantidadeEstoque($quantidade_estoque);
@@ -29,6 +30,7 @@ class Produto implements Entidade {
 		$this->setTamanho($tamanho);
 		$this->setCor($cor);
 		$this->setCategoria($categoria);
+		$this->setSituacao($situacao);
 		$this->setStatus($status);
 	}
 	
@@ -69,6 +71,7 @@ class Produto implements Entidade {
 		$hash['tamanho'] = $this->getTamanho();
 		$hash['cor'] = $this->getCor();
 		$hash['categoria'] = $this->getCategoria();
+		$hash['situacao'] = $this->getSituacao();
 		$hash['status'] = $this->getStatus();  
 		
 		return $hash;
@@ -79,7 +82,7 @@ class Produto implements Entidade {
 	 */
 	public static function fromArray($hash){
 		
-		return new Produto($hash['id'], $hash['quantidade_estoque'], $hash['descricao'], $hash['valor'], $hash['categoria'], $hash['genero'], $hash['tamanho'], $hash['cor'], $hash['status']);
+		return new Produto($hash['id'], $hash['quantidade_estoque'], $hash['descricao'], $hash['valor'], $hash['categoria'], $hash['genero'], $hash['tamanho'], $hash['cor'], $hash['situacao'] ,$hash['status']);
 	}
 	
 	//metodos get
@@ -107,6 +110,9 @@ class Produto implements Entidade {
 	}
 	public function getCor(){
 		return $this->cor;
+	}
+    public function getSituacao(){
+		return $this->situacao;
 	}
 	public function getFotos(){
 		return $this->fotos;
@@ -139,6 +145,9 @@ class Produto implements Entidade {
 	}
 	public function setCor($cor){
 		$this->cor = $cor;
+	}
+    public function setSituacao($situacao){
+		$this->situacao = $situacao;
 	}
 	public function setFotos($fotos){
 		$this->fotos = $fotos;
