@@ -76,7 +76,6 @@
 				if($usuario->getPerfil() == ACL::$ACL_FUNCIONARIO){ ?>
 					<li><a href="">Administração <img alt="" src="template/css/img/seta_down.png" height="6" /></a>
 						<ul class="sub_menu">
-						<li><a href="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>">Listagem de Produtos</a></li>
 						<li><a href="<?php echo Proxy::page(CadastrarProdutoPage::$NM_PAGINA);?>">Cadastro Produto</a></li>
 						<li><a href="<?php echo Proxy::page(ManterProdutoPage::$NM_PAGINA);?>">Manter Produto</a></li>
 						<li><a href="<?php echo Proxy::page(ManterReservaPage::$NM_PAGINA);?>">Manter Reserva</a></li>
@@ -108,9 +107,10 @@
 			
 		<?php }?>
 		    <li>
-		        <a href="">ClickVest</a>
+		        <a href="">ClickVest <img alt="" src="template/css/img/seta_down.png" height="6" /></a>
 		        <ul class="sub_menu">
 						<li><a href="<?php echo Proxy::page(ClickVestPage::$NM_PAGINA);?>">Quem Somos</a></li>
+						<li><a href="<?php echo Proxy::page(ServicoPage::$NM_PAGINA);?>">Serviço</a></li>
 						<li><a href="<?php echo Proxy::page(RaioAtuacaoPage::$NM_PAGINA);?>">Raio de Atuação</a></li>
 						<li><a href="<?php echo Proxy::page(PoliticasAtendimentoPage::$NM_PAGINA);?>">Políticas de Atendimento</a></li>
 				</ul>
@@ -121,7 +121,7 @@
 				<li><a href="<?php echo Proxy::page(CadastroUsuarioPage::$NM_PAGINA);?>">Cadastre-se</a></li>
 			<?php }else{?>
 				<li>
-				    <a href="">Meu Cadastro</a>
+				    <a href="">Meu Cadastro <img alt="" src="template/css/img/seta_down.png" height="6" /></a>
 				    <ul class="sub_menu">
 						<li><a href="<?php echo Proxy::page(AtualizarPerfilPage::$NM_PAGINA);?>">Dados Cadastrais</a></li>
 						<li><a href="<?php echo Proxy::page(CarrinhoPage::$NM_PAGINA);?>">Meu Carrinho</a></li>

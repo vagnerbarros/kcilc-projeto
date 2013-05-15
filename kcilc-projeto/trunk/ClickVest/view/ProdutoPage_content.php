@@ -46,8 +46,11 @@ include 'view/Topo_content.php';
 				
 				<p> <strong> Tamanho: </strong> <?php echo $produto->getTamanho();?> </p>
 			
+			    <?php if(SessionManager::hasUser()){ ?>
 				<p> <a href="javascript:submeterReserva();">Reservar</a> </p>
-		
+		        <?php }else{?>
+		        <p> Cadastre-se para reservar essa roupa! </p>
+		        <?php }?>
 	</form>
 			
 		</div>

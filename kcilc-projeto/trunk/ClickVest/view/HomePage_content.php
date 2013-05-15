@@ -37,13 +37,18 @@
 		<div class="content wh403 mrgL15 content_welcome">
 			<h3>Bem-Vindo ao ClickVest.net</h3>
 			
-			<p>A CLICKVEST é uma empresa que irá ofertar serviços de aluguel de roupas e acessórios 
-			para festas e eventos por meio da modalidade E-Commerce, visando comodidade e otimização de tempo. 
-			Para isso, a equipe de vendas, que corresponderão aos colaboradores on-line, telemarketing e 
-			vendedores que atenderão os clientes em suas residências deverão atender aos clientes de maneira 
-			eficiente, demonstrando seriedade, segurança e conhecimento dos produtos e serviços possibilitando a 
-			qualidade no atendimento e uma agradável experiência de compra...</p>
-
+			<p>Sua preocupação em sair de casa para alugar roupas acabou!
+               A Click Vest leva a roupa até você em apenas Clique.
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            </p>
 			<p>Contate-nos hoje mesmo! (81) 9999.9999</p>
 			
 		</div>
@@ -65,7 +70,7 @@
 				<li>
 					<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
 					<?php $fotos = $produto->getFotos();?>
-					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="140" height="115"/>
+					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="150" height="185"/>
 					<span class="descricao_prod"><?php echo $produto->getDescricao();?></span><br/>
 					<span class="preco_prod">R$ <?php echo $produto->getValor();?></span>
 					
@@ -98,7 +103,7 @@
 				<li>
 					<a href="<?php echo Proxy::page(ProdutoPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$produto->getId()));?>">  
 					<?php $fotos = $produto->getFotos();?>
-					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="140" height="115"/>
+					<img alt="" src="<?php echo Constants::$_FOTOS.$fotos[0]->getNomeArquivo();?>" width="150" height="185"/>
 					<span class="descricao_prod"><?php echo $produto->getDescricao();?></span><br/>
 					<span class="preco_prod">R$ <?php echo $produto->getValor();?></span>
 					

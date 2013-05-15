@@ -1,28 +1,47 @@
 <?php 
 include 'view/Topo_content.php';
 
-$fachada = Fachada::getInstance();
-$clientes = $fachada->cadastroUsuario()->listarClientes();
+
 
 ?>
 <div class="limite">
-
-			<ul>
-				<li><td>&nbsp&nbsp&nbsp Clientes &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
-			<?php foreach ($clientes as $cliente){?>
-				<li><td><?php echo $cliente->getNome();?></td>
-				<a href="<?php echo Proxy::page(AtualizarUsuarioPage::$NM_PAGINA, array(Proxy::encrypt('id')=>$cliente->getId()));?>">Editar</a>
-				<a href="<?php echo Proxy::action(RemoverClienteAction::$NM_ACTION, array(Proxy::encrypt('id')=>$cliente->getId()));?>">Remover</a></li>
+			
+	<div class="content_lista_carrinho">
+		
+		
+		<table class="lista_produtos">
+			
+			<thead>
+				<tr>
+					<td width="200">Nome</td>
+					<td width="150" align="center">Telefone</td>
+					<td width="150" align="center">E-mail</td>
+					<td width="10" align="center">CPF</td>
+				</tr>
+			</thead>
+			
+			<?php 
+			$fachada = Fachada::getInstance();
+            $clientes = $fachada->cadastroUsuario()->listarClientes();
+            foreach ($clientes as $cliente){
+			?>	
 				
-			<?php }?>
-				</li>
-				<br>
-				<br>
-				<br>
-				<br>
-				<br>
-				<a id="internal" href="<?php echo Proxy::page(CadastroUsuarioPage::$NM_PAGINA)?>">+ Cadastrar Cliente</a>
-			</ul>
+			<tbody>
+				<tr>
+					<td><?php echo $cliente->getNome();?></td>
+					<td align="center"><?php echo $cliente->getTelefone();?></td>
+					<td align="center"><?php echo $cliente->getEmail();?></td>
+					<td align="center"><?php echo $cliente->getCpf();?></td>
+				</tr>
+			</tbody>
+			
+		<?php }?>
+		</table>
+		
+	</div>
+	<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> <br />
+	<br /> <br />
+	<div class="clr"></div>
 
 <?php 
 	include 'view/rodape.php';

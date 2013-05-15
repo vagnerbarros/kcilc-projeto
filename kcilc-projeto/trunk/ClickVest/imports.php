@@ -42,6 +42,7 @@ Imports::page("PoliticasAtendimentoPage");
 Imports::page("ClickVestPage");
 Imports::page("RaioAtuacaoPage");
 Imports::page("HistoricoReservaPage");
+Imports::page("ServicoPage");
 
 //Registra as Actions
 Imports::action("CadastroUsuarioAction");
