@@ -34,6 +34,7 @@ class ManterClientePage extends Page {
 		$this->importCss("style_topo.css");
 		$this->importCss("style.css");
 		$this->importCss("style_rodape.css");
+		$this->importCss("style_carrinho.css");
 		
 		$this->importJs("jquery.min.js");
 		$this->importJs("jquery.easing.1.3.js");

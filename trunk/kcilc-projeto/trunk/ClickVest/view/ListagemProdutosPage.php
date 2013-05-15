@@ -35,6 +35,7 @@ class ListagemProdutosPage extends Page {
 		$this->importCss("style_rodape.css");
 		$this->importCss("style_index.css");
 		$this->importCss("jPages.css");
+		$this->importCss("style_carrinho.css");
 		
 		$this->importJs("jquery.min.js");
 		$this->importJs("jquery.easing.1.3.js");

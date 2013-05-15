@@ -31,7 +31,7 @@ class ListarReservaPage extends Page {
 	public function head($args, $lang){
 		
 		$this->importCss("style_topo.css");
-		
+		$this->importCss("style_carrinho.css");
 		$this->importJs("jquery.min.js");
 		$this->importJs("jquery.easing.1.3.js");
 		$this->importJs("script_topo.js");

@@ -38,7 +38,7 @@ class DetalharReservaPage extends Page {
 		
 		$this->importCss("style.css");
 		$this->importCss("style_rodape.css");
-		
+		$this->importCss("style_carrinho.css");
 		$this->importJs("script_slide.js");
 		$this->importJs("superfish.js");
 		$this->importJs("jquery.cycle.all.min.js");
