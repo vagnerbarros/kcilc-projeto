@@ -1,3 +1,15 @@
+<script type="text/javascript">
+
+$(function() {
+	$("#telefone").mask("(99)9999-9999");
+	$("#celular").mask("(99)9999-9999");
+	$("#cep").mask("99.999-999");
+	$("#cpf").mask("999.999.999-99");
+  });
+
+
+</script>
+
 <form class="form_cad" method='POST' action='<?php echo Proxy::action(CadastroUsuarioAction::$NM_ACTION)?>' onsubmit="return validarCadastroForm();" target="_top">
 	
 	<label class="altr">* Campos Obrigatórios</label>
@@ -75,6 +87,8 @@
 	
 	<label class="wh200"><a href="<?php echo Proxy::page(PoliticasAtendimentoPage::$NM_PAGINA);?>" target="_blank" style="color: black;">Políticas de Atendimento</a> <span>*</span></label>
 	
+	<br/>
+	<br/>
 	
 	<input type="submit" class='btn btn-primary btn-large' id="submit_form" value="Confimar" />
 	

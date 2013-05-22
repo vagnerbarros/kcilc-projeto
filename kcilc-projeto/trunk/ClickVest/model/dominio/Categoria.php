@@ -16,7 +16,6 @@ class Categoria {
 		
 		if($genero == Genero::$_MASCULINO){
 			array_push($categorias, Categoria::$_SAPATO);
-			array_push($categorias, Categoria::$_CINTO);
 			array_push($categorias, Categoria::$_SMOKING);
 			array_push($categorias, Categoria::$_TERNO);
 		}
@@ -26,7 +25,6 @@ class Categoria {
 			array_push($categorias, Categoria::$_VESTIDO_CURTO);
 			array_push($categorias, Categoria::$_VESTIDO_LONGO);
 			array_push($categorias, Categoria::$_SANDALIA);
-			array_push($categorias, Categoria::$_SAPATO);
 		}
 		return $categorias;
 	}

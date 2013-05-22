@@ -55,10 +55,12 @@ class CadastroUsuarioAction extends Action {
 			$fachada = Fachada::getInstance();
 			$fachada->cadastroUsuario()->cadastrarCliente($usuario);
 			
+			SessionManager::setUser($usuario);
+			
 			//mensagem de sucesso
 			$this->setMessage("Usuário cadastrado com sucesso.", Constants::$_MSG_SUCCESS);
 			$this->load('100%');		
-			$this->setForward(Forward::go(ManterClientePage::$NM_PAGINA));
+			$this->setForward(Forward::go(HomePage::$NM_PAGINA.'&msg_cadastro=ok'));
 		}
 		catch(CaptchaIncorretoException $e){
 			$this->setMessage("As letras não foram digitadas corretamente! Por favor, tente novamente...", Constants::$_MSG_ERROR);

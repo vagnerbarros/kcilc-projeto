@@ -49,7 +49,7 @@ include 'view/Topo_content.php';
 			    <?php if(SessionManager::hasUser()){ ?>
 				<p> <a href="javascript:submeterReserva();">Reservar</a> </p>
 		        <?php }else{?>
-		        <p> Cadastre-se para reservar essa roupa! </p>
+		        <p> Para reservar esta peça é necessário que você esteja cadastrado no nosso banco de dados.</p> 
 		        <?php }?>
 	</form>
 			

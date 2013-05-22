@@ -34,7 +34,7 @@ class ReservarProdutoAction extends Action {
 
 			$this->setMessage("Produto reservado com sucesso.", Constants::$_MSG_SUCCESS);
 			$this->load('100%');
-			$this->setForward(Forward::go(HomePage::$NM_PAGINA));
+			$this->setForward(Forward::go(HomePage::$NM_PAGINA.'&msg_carrinho=ok'));
 		}
 		catch(QuantidadeInsuficienteException $e){
 			

@@ -12,7 +12,7 @@ $(function() {
 		.stop(true)
 		.animate({
 			'width':'150px',
-			'height':'230px',
+			'height':'195px',
 			'left':'0px'
 		},1000,'easeOutBack');
 	}).bind('mouseleave',function(){
@@ -94,7 +94,6 @@ $(function() {
 
 function submeter() {
 	var dig = document.getElementById('txt_busca').value;
-	alert(dig.lenght);
 	if(dig!=""){
 		form_busca.submit();
 	}else{

@@ -38,7 +38,7 @@ class CadastrarProdutoAction extends Action {
 		
 			
 		$this->setMessage("Produto cadastrado com sucesso.", Constants::$_MSG_SUCCESS);
-		$this->load('100%');
+		//$this->load('100%');
 		$this->setForward(Forward::go(CadastrarProdutoPage::$NM_PAGINA));
 		
 	}
