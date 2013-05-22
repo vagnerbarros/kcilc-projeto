@@ -25,7 +25,7 @@ class FecharReservasAction extends Action {
 		
 		$this->setMessage("Reservas confirmadas com sucesso.", Constants::$_MSG_SUCCESS);
 		$this->load('100%');
-		$this->setForward(Forward::go(HomePage::$NM_PAGINA));
+		$this->setForward(Forward::go(HistoricoReservaPage::$NM_PAGINA.'&msg_reserva=ok'));
 	}
 }
 ?>

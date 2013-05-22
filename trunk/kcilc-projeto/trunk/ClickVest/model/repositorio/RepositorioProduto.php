@@ -47,12 +47,32 @@ class RepositorioProduto extends RepositorioEntidade {
 		return $result;
 	}
 	
+    public function selectBySituacaiLimitada($situacao, $limite){		
+    	$produto = Constants::$_BASE.".".Constants::$_NAMESPACE.Produto::$NM_ENTITY;
+		$query = "SELECT * FROM $produto WHERE status = '".Constants::$_ATIVO."' AND situacao = :situacao ORDER BY RAND() LIMIT " . $limite;
+		$result = ConexaoBD::prepare($query);
+		$result->bindValue(":situacao", $situacao);
+		$result->execute();
+		$this->reportErrors($result);
+		return $this->mount($result);
+	}
+	
 	public function selectByGeneroCategoria($genero, $categoria){
 		$keys['genero'] = $genero;
 		$keys['categoria'] = $categoria;
 		$result = $this->select($keys);
 		return $result;
 	}
+	
+    public function selectByDescricao($descricao){		
+    	$produto = Constants::$_BASE.".".Constants::$_NAMESPACE.Produto::$NM_ENTITY;
+		$query = "SELECT * FROM $produto WHERE status = '".Constants::$_ATIVO."' AND descricao LIKE '%".$descricao."%'";
+		$result = ConexaoBD::prepare($query);
+		$result->execute();
+		$this->reportErrors($result);
+		return $this->mount($result);
+	}
+	
 	
 	public function selectByGeneroCategoriaTamanhoCor($genero, $categoria, $tamanho, $cor){
 		$keys['genero'] = $genero;

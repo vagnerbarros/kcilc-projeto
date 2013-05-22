@@ -6,5 +6,5 @@
 	<button type="submit" class='btn btn-primary btn-large'>Entrar</button>
 	<br/>
 	<a href="<?php echo Proxy::page(CadastroUsuarioPage::$NM_PAGINA);?>">Cadastre-se</a><br>
-	<a class='transition' href='#'>Esqueceu sua senha?</a>
+	<!--a class='transition' href='#'>Esqueceu sua senha?</a>-->
 </form>

@@ -50,8 +50,16 @@ class CadastroProduto extends CadastroEntidade {
 		return $this->repositorio->selectBySituacao($situacao);
 	}
 	
+	public function buscarProdutoPorSituacaoLimitada($situacao, $limite){
+		return $this->repositorio->selectBySituacaiLimitada($situacao, $limite);
+	}
+	
 	public function buscarGeneroCategoria($genero, $categoria){
 		return $this->repositorio->selectByGeneroCategoria($genero, $categoria);
+	}
+	
+    public function buscarDescricao($descricao){
+		return $this->repositorio->selectByDescricao($descricao);
 	}
 	
 	public function buscarGeneroCategoriaTamanhoCor($genero, $categoria, $tamanho, $cor){

@@ -43,6 +43,7 @@ Imports::page("ClickVestPage");
 Imports::page("RaioAtuacaoPage");
 Imports::page("HistoricoReservaPage");
 Imports::page("ServicoPage");
+Imports::page("FormChatPage");
 
 //Registra as Actions
 Imports::action("CadastroUsuarioAction");

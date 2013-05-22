@@ -30,6 +30,9 @@ class HomePage extends Page {
 	 */
 	public function head($args, $lang){
 		
+		/*
+		 * 
+		 */
 		$this->importCss("style_topo.css");
 		$this->importCss("style.css");
 		$this->importCss("style_rodape.css");

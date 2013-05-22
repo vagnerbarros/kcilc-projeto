@@ -1,10 +1,34 @@
 
 <?php 
 	include 'view/Topo_content.php';
+	$msg_carrinho = $args->get('msg_carrinho');
+	$msg_cadastro = $args->get('msg_cadastro');
 ?>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script>
+  $(function() {
+    $( "#dialog" ).dialog();
+  });
+</script>
 
 <div class="limite">
 
+
+        <?php if($msg_carrinho!=null){ ?>
+	        <div id="dialog" title="ClickVest">
+                <p>Produto Adicionado ao Carrinho!</p>
+            </div>
+        <?php }?>
+
+        <?php if($msg_cadastro!=null){ ?>
+	        <div id="dialog" title="ClickVest">
+                <p>Bem-Vindo ao ClickVest! Agora você já pode fazer suas reservas e usar todo nosso serviço.</p>
+            </div>
+        <?php }?>
+        
 		<div id="slider">
 			<!-- start slideshow -->
 			<div id="slideshow">
@@ -37,19 +61,19 @@
 		<div class="content wh403 mrgL15 content_welcome">
 			<h3>Bem-Vindo ao ClickVest.net</h3>
 			
-			<p>Sua preocupação em sair de casa para alugar roupas acabou!
-               A Click Vest leva a roupa até você em apenas Clique.
+			<p>Sua preocupação em sair de casa para alugar roupas acabou! 
+			A ClickVest leva a roupa até você em apenas um clique!
+            Confira os lançamentos e promoções, agende sua visita conosco e tenha segurança, 
+            elegância e comodidade sem precisar sair de casa!
             <br/>
             <br/>
-            <br/>
-            <br/>
-            <br/>
+            ClickVest, seu look em um clique!
             <br/>
             <br/>
             <br/>
             <br/>
             </p>
-			<p>Contate-nos hoje mesmo! (81) 9999.9999</p>
+			<p>Contate-nos hoje mesmo! 0800 3722 2170</p>
 			
 		</div>
 		
@@ -63,7 +87,7 @@
 				
 				<?php
 					$fachada = Fachada::getInstance();
-					$produtos = $fachada->cadastroProduto()->buscarProdutoPorSituacao(SituacaoProduto::$_LANCAMENTO); 
+					$produtos = $fachada->cadastroProduto()->buscarProdutoPorSituacaoLimitada(SituacaoProduto::$_LANCAMENTO, 10); 
 					foreach($produtos as $produto){
 				?>
 				
@@ -96,7 +120,7 @@
 				
 				<?php
 					$fachada = Fachada::getInstance();
-					$produtos = $fachada->cadastroProduto()->buscarProdutoPorSituacao(SituacaoProduto::$_PROMOCAO); 
+					$produtos = $fachada->cadastroProduto()->buscarProdutoPorSituacaoLimitada(SituacaoProduto::$_PROMOCAO, 5); 
 					foreach($produtos as $produto){
 				?>
 				

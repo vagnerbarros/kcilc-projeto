@@ -161,7 +161,8 @@ div#slideshow {
 .lista_produtos li{
 	position: relative;
 	float: left;
-	margin-top: 10px;
+	margin-top: 25px;
+	margin-bottom: 40px;
 	width: 170px;
 	margin-right: 10px;
 	height: 220px;

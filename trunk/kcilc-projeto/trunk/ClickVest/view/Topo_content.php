@@ -52,14 +52,11 @@
 			<img alt="" src="template/css/img/logo.png" />
 		</div>
 
-		<form action="teste" class="form_busca" id="form_busca"
-			name="form_busca">
-
-			<input type="text" id="txt_busca" /> <a
+		<form action="<?php echo Proxy::page(ListagemProdutosPage::$NM_PAGINA);?>" method="post" class="form_busca" id="form_busca" name="form_busca">
+			<input type="text" id="txt_busca" name="<?php echo Proxy::encrypt('descricao');?>" /><a
 				onclick="javascript:submeter();"> <img alt=""
 				src="template/css/img/search.png" />
 			</a>
-
 		</form>
 
 	</div>
