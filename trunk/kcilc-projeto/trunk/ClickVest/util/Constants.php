@@ -15,16 +15,15 @@ class Constants {
 		//DATABASE HOST
 		public static $_HOST = "localhost"; //LOCAL
 		//public static $_HOST = "dbmy0101.whservidor.com"; //deploy
-		
-		//DATABASE INFO
-	//	public static $_USER = "sillabus_4";
-	//	public static $_PASS = "sillabus4cafeh"; //sillabus4cafeh
-	//	public static $_BASE = "sillabus_4"; 
-	
+			
 		public static $_USER = "root";
 		public static $_PASS = ""; 
 		public static $_BASE = "clickvest";
 	
+		//public static $_USER = "clickvest1";
+		//public static $_PASS = "Higgo251"; 
+		//public static $_BASE = "clickvest1";
+		
 		//ATIVO
 		public static $_ATIVO = 'ATIVO';
 		public static $_INATIVO = 'INATIVO';
