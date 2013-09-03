@@ -33,7 +33,6 @@ class Constants {
 		public static $_NAO = 'N';
 		
 		//NAMESPACES
-		//public static $_NAMESPACE = "EEPE_TST_";//FREEMYSQL TESTE
 		public static $_NAMESPACE = "";
 		
 		//BODY MESSAGE
